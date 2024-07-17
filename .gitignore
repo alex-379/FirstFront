@@ -1,0 +1,7 @@
+# User-specific files
+/*.css
+*.map
+
+# Visual Studio code coverage results
+*.coverage
+*.coveragexml

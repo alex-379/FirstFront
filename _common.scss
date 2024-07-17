@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$main-font: "Montserrat";
+$white-color: white;
+$orange-back-color: rgb(247, 167, 12);
+$orange-main-color: rgb(231, 116, 46);
+
+body {
+    font-family: $main-font;
+}
+
+h1 {
+    line-height: 120%;
+}
+
+.container {
+    max-width: 56.25%;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
