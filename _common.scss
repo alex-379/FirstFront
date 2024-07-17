@@ -7,6 +7,7 @@ $main-font: "Montserrat";
 $white-color: white;
 $orange-back-color: rgb(247, 167, 12);
 $orange-main-color: rgb(231, 116, 46);
+$button-services: rgb(222, 222, 222);
 
 body {
     font-family: $main-font;
@@ -14,6 +15,20 @@ body {
 
 h1 {
     line-height: 120%;
+    font-size: 3.5em;
+}
+
+h3 {
+    line-height: 120%;
+    font-size: 2em;
+}
+
+a {
+    display: inline-block;
+    border-radius: 10px;
+    text-decoration: inherit;
+    color: inherit;
+    text-align: center;
 }
 
 .container {
@@ -23,4 +38,8 @@ h1 {
 
 .flex{
     display: flex;
+}
+
+.grid{
+    display: grid;
 }
