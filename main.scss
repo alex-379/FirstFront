@@ -12,26 +12,28 @@
         max-width: 5%;
     }
 
-    button {
-        margin: 7% 0;
-        padding: 1% 2%;
-        border-radius: 10px;
+    .nav-button {
         background: radial-gradient(50.00% 50.00% at 50% 50%,$orange-back-color,$orange-main-color 100%);
         text-transform: uppercase;
         font-weight: 600;
         line-height: 120%;
         font-size: 1.7em;
-        border: none;
+        margin: 7% 0;
+        padding: 1% 2%;
+
+        &:hover {
+            background: $button-services-color;
+        }
+
+        &:focus {
+            background: $grey-active-color;
+        }
     }
 
-    a {
-        background: radial-gradient(50.00% 50.00% at 50% 50%,$orange-back-color,$orange-main-color 100%);
+    .nav-link {
+        color: $white-color;
         text-transform: uppercase;
         font-weight: 600;
-        line-height: 120%;
-        font-size: 1.7em;
-        margin: 7% 0;
-        padding: 1% 2%;
     }
 
     background-image: url("./assets/top-background.png");
@@ -41,11 +43,7 @@
         padding-top: 5%;
         gap: 15%;
     }
-
-    .logo {
-        margin-right: auto;
-    }
-
+    
     .vector {
         margin-right: 8px;
     }
@@ -68,11 +66,6 @@
     .menu-container {
         margin-top: 24px;
         gap: 0.9%;
-
-        p {
-            text-transform: uppercase;
-            font-weight: 600;
-        }
     }
 
     .border{
@@ -89,6 +82,14 @@
             color: $orange-main-color;
         }
     }
+
+    .phone-for-desktop {
+        display: flex;
+    }
+
+    .burger-menu-btn {
+        display: none;
+    }
 }
 
 #services-section {
@@ -98,14 +99,22 @@
         margin: 8% 0;
     }
 
-    a {
-        background: $button-services;
+    .nav-button {
+        background: $button-services-color;
         text-transform: uppercase;
         font-weight: 600;
         line-height: 120%;
         font-size: 1.1em;
         margin: 7% 10%;
         padding: 3% 6%;
+        
+        &:hover {
+            background: $orange-back-color;
+        }
+
+        &:focus {
+            background: $orange-active-color;
+        }
     }
 
     .services-container {
@@ -118,3 +127,5 @@
         gap: 1rem;
     }
 }
+
+@import 'mobile';

@@ -7,7 +7,10 @@ $main-font: "Montserrat";
 $white-color: white;
 $orange-back-color: rgb(247, 167, 12);
 $orange-main-color: rgb(231, 116, 46);
-$button-services: rgb(222, 222, 222);
+$orange-active-color: rgb(255, 98, 0);
+$button-services-color: rgb(222, 222, 222);
+$grey-active-color: rgb(80, 80, 80);
+
 
 body {
     font-family: $main-font;
@@ -24,9 +27,12 @@ h3 {
 }
 
 a {
+    text-decoration: none;
+}
+
+.nav-button {
     display: inline-block;
     border-radius: 10px;
-    text-decoration: inherit;
     color: inherit;
     text-align: center;
 }
@@ -42,4 +48,32 @@ a {
 
 .grid{
     display: grid;
+}
+
+@media (width < 900px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .container {
+        max-width: 350px;
+    }
+}
+
+@media (width > 1360px) {
+    .container {
+        max-width: 1050px;
+    }
+}
+
+@media (width > 1800px) {
+    .container {
+        max-width: 1080px;
+    } 
+}
+
+@media (width > 2000px) {
+    .container {
+        max-width: 1600px;
+    } 
 }

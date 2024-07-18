@@ -1,0 +1,42 @@
+@media (width < 900px) {
+    #top-section {
+        .menu-container,
+        .phone-for-desktop {
+            display: none;
+        }
+
+        .nav-button {
+            padding: 4% 8%;
+        }
+
+        .small-text {
+            max-width: 100%;
+        }
+
+        .logo {
+           max-width:8em;
+           margin-top: 4%;
+        }
+
+        .top-container {
+            display: grid;
+            
+            //flex-wrap: wrap-reverse;
+        }
+
+        .phone {
+            font-size: 1em;
+        }
+
+        .burger-menu-btn {
+            display: inline-block;
+        }
+
+    }
+
+    #services-section {
+        .services-container {
+            grid-template-columns: 1fr;
+        }
+    }
+}
