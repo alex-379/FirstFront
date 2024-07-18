@@ -20,10 +20,27 @@
 
         .phone {
             font-size: 1em;
+            margin-right: 100px;
         }
 
         .burger-menu-btn {
             display: inline-block;
+            background-color: transparent;
+        }
+
+        .phones-and-media-container {
+            position: relative;
+        }
+    
+
+        .social-media {
+            position: absolute;
+            right: 0;
+            top: 85px;
+        }
+
+        .top-container {
+            flex-wrap: wrap-reverse;
         }
     }
 
