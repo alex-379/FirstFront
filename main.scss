@@ -12,6 +12,8 @@
         max-width: 5%;
     }
 
+    background-image: url("./assets/top-background.png");
+    
     .nav-button {
         background: radial-gradient(50.00% 50.00% at 50% 50%,$orange-back-color,$orange-main-color 100%);
         text-transform: uppercase;
@@ -36,8 +38,6 @@
         font-weight: 600;
         white-space: nowrap;
     }
-
-    background-image: url("./assets/top-background.png");
 
     .top-container {
         justify-content: space-between;
@@ -86,10 +86,6 @@
         &.orange {
             color: $orange-main-color;
         }
-    }
-
-    .burger-menu-btn {
-        display: none;
     }
 
     .logo {

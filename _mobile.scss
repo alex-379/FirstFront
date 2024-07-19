@@ -1,11 +1,7 @@
 @media (width < 900px) {
     #top-section {
-        .menu-container,
-        .phone-for-desktop {
-            display: none;
-        }
-
         .nav-button {
+            font-size: 1.4em;
             padding: 4% 8%;
         }
 
@@ -24,8 +20,9 @@
         }
 
         .burger-menu-btn {
-            display: inline-block;
             background-color: transparent;
+            border: none;
+            display: flex;
         }
 
         .phones-and-media-container {
@@ -36,13 +33,28 @@
         .social-media {
             position: absolute;
             right: 0;
-            top: 85px;
+            bottom: -65px;
         }
 
         .top-container {
             flex-wrap: wrap-reverse;
+            position: relative;
         }
-    }
+
+        .menu-container {
+            flex-direction: column;
+            width: 100%;
+            gap: 15px;
+            position: absolute;
+            right: -120%;
+            bottom: -450px;
+            transition: right .4s ease-in-out;
+        }
+
+        .border {
+            border: 1px solid $orange-main-color;
+        }
+        }
 
     #services-section {
         .services-container {
