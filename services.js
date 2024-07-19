@@ -58,8 +58,6 @@ const services = [
 ];
 
 const gridContainer = document.querySelector('.services-container');
-const navMenu = document.querySelector('.menu-container');
-
 for (const service of services) {
   const newDiv = document.createElement('div');
   gridContainer.appendChild(newDiv);
@@ -76,6 +74,11 @@ for (const service of services) {
   `;
 }
 
+const navMenu = document.querySelector('.menu-container');
 function toggleMenu() {
   navMenu.classList.toggle('opened');
 }
+
+const service = services[0];
+console.log(service.logo);
+console.log(service["logo"]);
