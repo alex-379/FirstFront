@@ -76,13 +76,6 @@ for (const service of services) {
   `;
 }
 
-var slider = tns({
-  container: '.my-slider',
-  items: 1,
-  slideBy: 'page',
-  autoplay: true
-});
-
 function toggleMenu() {
   navMenu.classList.toggle('opened');
 }
