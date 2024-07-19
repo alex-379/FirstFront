@@ -7,6 +7,7 @@
 
         .small-text {
             max-width: 100%;
+            font-size: 1.4em;
         }
 
         .logo {
@@ -48,7 +49,12 @@
             position: absolute;
             right: -120%;
             bottom: -450px;
-            transition: right .4s ease-in-out;
+            transition: right .2s ease-in-out;
+
+            &.opened {
+                right: 0%;
+                background-image: url("./assets/top-background.png");
+            }
         }
 
         .border {

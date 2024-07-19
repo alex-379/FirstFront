@@ -58,6 +58,7 @@ const services = [
 ];
 
 const gridContainer = document.querySelector('.services-container');
+const navMenu = document.querySelector('.menu-container');
 
 for (const service of services) {
   const newDiv = document.createElement('div');
@@ -75,4 +76,8 @@ for (const service of services) {
       <a href="#price-section" class="nav-button">Подробности и цены</a>
     </div>
   `;
+
+function toggleMenu() {
+  navMenu.classList.toggle('opened');
+}
 }
