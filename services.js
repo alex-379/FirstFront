@@ -74,8 +74,15 @@ for (const service of services) {
     `).join('')}
     <a href="#price-section" class="nav-button">Подробности и цены</a>
   `;
+}
 
-  function toggleMenu() {
-    navMenu.classList.toggle('opened');
-  }
+var slider = tns({
+  container: '.my-slider',
+  items: 1,
+  slideBy: 'page',
+  autoplay: true
+});
+
+function toggleMenu() {
+  navMenu.classList.toggle('opened');
 }
