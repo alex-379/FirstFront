@@ -64,20 +64,18 @@ for (const service of services) {
   const newDiv = document.createElement('div');
   gridContainer.appendChild(newDiv);
   newDiv.innerHTML = `
-    <div>
-      <img src="./assets/${service.logo}" alt="${service.logoName}">
-      <h3>${service.name}</h3>
-      ${service.servicesType.map(serviceType => `
-        <div class="text-container flex">
-          <img src="./assets/tick.png" alt="">
-          <p>${serviceType}</p>
-        </div>
-      `).join('')}
-      <a href="#price-section" class="nav-button">Подробности и цены</a>
-    </div>
+    <img src="./assets/${service.logo}" alt="${service.logoName}">
+    <h3>${service.name}</h3>
+    ${service.servicesType.map(serviceType => `
+      <div class="text-container flex">
+        <img src="./assets/tick.png" alt="">
+        <p>${serviceType}</p>
+      </div>
+    `).join('')}
+    <a href="#price-section" class="nav-button">Подробности и цены</a>
   `;
 
-function toggleMenu() {
-  navMenu.classList.toggle('opened');
-}
+  function toggleMenu() {
+    navMenu.classList.toggle('opened');
+  }
 }
