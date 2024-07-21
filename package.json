@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/alex-379/FirstFront#readme",
   "dependencies": {
+    "@types/node": "^20.14.11",
     "save-dev": "^0.0.1-security",
     "tiny-slider": "^2.9.4",
     "yarn": "^1.22.22"

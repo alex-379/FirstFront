@@ -292,5 +292,13 @@ if (gridContainer){
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
         .then((users: User[]) => renderServices(users, gridContainer))
+}
 
+function toggleMenu(navMenu: Element) {
+    navMenu.classList.toggle('opened');
+  }
+
+const navMenu = document.querySelector('.menu-container');
+if (navMenu) {
+     toggleMenu(navMenu);
 }
