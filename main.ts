@@ -1,9 +1,48 @@
-const services = [
+import { NonNullChain } from "typescript";
+
+type Service = {
+    logo: string,
+    logoName: string, 
+    name: string,
+    typesServices: string[]
+}
+
+interface Address {
+    street: string,
+    suite: string,
+    city: string,
+    zipcode: string,
+    geo: Geo,
+}
+
+interface Geo {
+    lat: string,
+    lng: string 
+}
+
+interface Company {
+    name: string,
+    catchPhrase: string,
+    bs: string,
+}
+
+interface User {
+    id: number,
+    name: string,
+    username: string,
+    email: string,
+    address: Address,
+    phone: string,
+    website: string,
+    company: Company,
+}
+
+const services: Service[] = [
     {
         logo: 'computer.png',
         logoName: 'computer',
         name: 'Ремонт компьютеров',
-        servicesType: [
+        typesServices: [
             'Замена блока питания',
             'Замена материнской платы',
             'Замена жёсткого диска',
@@ -17,7 +56,7 @@ const services = [
         logo: 'notebook.png',
         logoName: 'notebook',
         name: 'Ремонт ноутбуков',
-        servicesType: [
+        typesServices: [
             'Ремонт залитого ноутбука',
             'Замена клавиатуры',
             'Замена экрана',
@@ -31,7 +70,7 @@ const services = [
         logo: 'monoblock.png',
         logoName: 'monoblock',
         name: 'Ремонт моноблоков',
-        servicesType: [
+        typesServices: [
             'Ремонт материнской платы',
             'Замена комплектующих',
             'Замена видеокарты',
@@ -45,7 +84,7 @@ const services = [
         logo: 'monoblock.png',
         logoName: 'monoblock',
         name: 'Ремонт техники Apple',
-        servicesType: [
+        typesServices: [
             'Ремонт MacPro',
             'Ремонт iMac',
             'Ремонт MacBook',
@@ -59,7 +98,7 @@ const services = [
       logo: 'computer.png',
       logoName: 'computer',
       name: 'Ремонт компьютеров',
-      servicesType: [
+      typesServices: [
           'Замена блока питания',
           'Замена материнской платы',
           'Замена жёсткого диска',
@@ -73,7 +112,7 @@ const services = [
       logo: 'notebook.png',
       logoName: 'notebook',
       name: 'Ремонт ноутбуков',
-      servicesType: [
+      typesServices: [
           'Ремонт залитого ноутбука',
           'Замена клавиатуры',
           'Замена экрана',
@@ -87,7 +126,7 @@ const services = [
       logo: 'monoblock.png',
       logoName: 'monoblock',
       name: 'Ремонт моноблоков',
-      servicesType: [
+      typesServices: [
           'Ремонт материнской платы',
           'Замена комплектующих',
           'Замена видеокарты',
@@ -101,7 +140,7 @@ const services = [
       logo: 'monoblock.png',
       logoName: 'monoblock',
       name: 'Ремонт техники Apple',
-      servicesType: [
+      typesServices: [
           'Ремонт MacPro',
           'Ремонт iMac',
           'Ремонт MacBook',
@@ -115,7 +154,7 @@ const services = [
     logo: 'computer.png',
     logoName: 'computer',
     name: 'Ремонт компьютеров',
-    servicesType: [
+    typesServices: [
         'Замена блока питания',
         'Замена материнской платы',
         'Замена жёсткого диска',
@@ -129,7 +168,7 @@ const services = [
     logo: 'notebook.png',
     logoName: 'notebook',
     name: 'Ремонт ноутбуков',
-    servicesType: [
+    typesServices: [
         'Ремонт залитого ноутбука',
         'Замена клавиатуры',
         'Замена экрана',
@@ -143,7 +182,7 @@ const services = [
     logo: 'monoblock.png',
     logoName: 'monoblock',
     name: 'Ремонт моноблоков',
-    servicesType: [
+    typesServices: [
         'Ремонт материнской платы',
         'Замена комплектующих',
         'Замена видеокарты',
@@ -157,7 +196,7 @@ const services = [
     logo: 'monoblock.png',
     logoName: 'monoblock',
     name: 'Ремонт техники Apple',
-    servicesType: [
+    typesServices: [
         'Ремонт MacPro',
         'Ремонт iMac',
         'Ремонт MacBook',
@@ -171,7 +210,7 @@ const services = [
   logo: 'computer.png',
   logoName: 'computer',
   name: 'Ремонт компьютеров',
-  servicesType: [
+  typesServices: [
       'Замена блока питания',
       'Замена материнской платы',
       'Замена жёсткого диска',
@@ -185,7 +224,7 @@ const services = [
   logo: 'notebook.png',
   logoName: 'notebook',
   name: 'Ремонт ноутбуков',
-  servicesType: [
+  typesServices: [
       'Ремонт залитого ноутбука',
       'Замена клавиатуры',
       'Замена экрана',
@@ -199,7 +238,7 @@ const services = [
   logo: 'monoblock.png',
   logoName: 'monoblock',
   name: 'Ремонт моноблоков',
-  servicesType: [
+  typesServices: [
       'Ремонт материнской платы',
       'Замена комплектующих',
       'Замена видеокарты',
@@ -213,7 +252,7 @@ const services = [
   logo: 'monoblock.png',
   logoName: 'monoblock',
   name: 'Ремонт техники Apple',
-  servicesType: [
+  typesServices: [
       'Ремонт MacPro',
       'Ремонт iMac',
       'Ремонт MacBook',
@@ -221,41 +260,37 @@ const services = [
       'Ремонт материнской платы',
       'Замена матрицы',
       'и другое...',
-  ],
+    ],
 }, 
 ];
 
 const logos = services.map(service => service.logo)
-const servicesType = services.map(service => service.servicesType)
-
-const navMenu = document.querySelector('.menu-container');
-function toggleMenu() {
-  navMenu.classList.toggle('opened');
-}
+const typesServicesAll = services.map(service => service.typesServices)
 
 const gridContainer = document.querySelector('.services-container');
+function renderServices(data: User[], container: Element) {
+let counter = 0;
+for (const service of data) {
+const logo = logos[counter++];
+const typesServices = typesServicesAll[counter];
+const newDiv = document.createElement('div');
+container.appendChild(newDiv);
+newDiv.innerHTML = `
+    <img src="./assets/${logo}" alt="${service.website}">
+    <h3>${service.name}</h3>
+    ${typesServices.map(typeService => `
+    <div class="text-container flex">
+        <img src="./assets/tick.png" alt="">
+        <p>${typeService}</p>
+    </div>
+    `).join('')}
+    <a href="#price-section" class="nav-button">Подробности и цены</a>
+`;
+}
+}
+if (gridContainer){
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then((users: User[]) => renderServices(users, gridContainer))
 
-fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(json => renderServices(json))
-
-function renderServices(data) {
-  let counter = 0;
-  for (const service of data) {
-    const logo = logos[counter++];
-    const serviceType = servicesType[counter];
-    const newDiv = document.createElement('div');
-    gridContainer.appendChild(newDiv);
-    newDiv.innerHTML = `
-      <img src="./assets/${logo}" alt="${service.website}">
-      <h3>${service.name}</h3>
-      ${serviceType.map(serviceType => `
-        <div class="text-container flex">
-          <img src="./assets/tick.png" alt="">
-          <p>${serviceType}</p>
-        </div>
-      `).join('')}
-      <a href="#price-section" class="nav-button">Подробности и цены</a>
-    `;
-  }
 }

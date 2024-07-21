@@ -1,6 +1,8 @@
 # User-specific files
+node_modules
 /*.css
 *.map
+*lock*
 
 # Visual Studio code coverage results
 *.coverage
