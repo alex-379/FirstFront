@@ -294,11 +294,9 @@ if (gridContainer){
         .then((users: User[]) => renderServices(users, gridContainer))
 }
 
-function toggleMenu(navMenu: Element) {
-    navMenu.classList.toggle('opened');
-  }
-
 const navMenu = document.querySelector('.menu-container');
-if (navMenu) {
-     toggleMenu(navMenu);
-}
+function toggleMenu() {
+    if (navMenu) {
+            navMenu.classList.toggle('opened');
+        }
+  }
